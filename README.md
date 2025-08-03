@@ -1,3 +1,4 @@
-# cmd-arguments-parser
+# CMD Arguments parsing library
 
-hello world
+Later there will be smth here :D
+

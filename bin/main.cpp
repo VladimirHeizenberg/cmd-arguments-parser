@@ -1,10 +1,7 @@
-#include <functional>
+#include <iostream>
+
 #include <lib/ArgParser.h>
 
-#include <sstream>
-#include <iostream>
-#include <numeric>
-#include <iterator>
 
 int main(int argc, char** argv) {
     ArgumentParser::ArgParser p("My Parser");
