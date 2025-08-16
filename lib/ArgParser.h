@@ -81,9 +81,6 @@ public:
         return AddArgument<bool>(long_name, description);
     }
 
-    template<>
-    bool GetValue(const std::string& long_name, int index) = delete;
-
     bool GetFlag(const std::string& long_name, int index) = delete;
     bool GetFlag(const std::string& long_name) {
         return GetValue<bool>(long_name);
@@ -135,5 +132,8 @@ private:
     int FindEqualSymbolInString(std::string_view argument) const;
     void Validate();
 };
+
+template<>
+bool ArgParser::GetValue(const std::string& long_name, int index) = delete;
 
 } // namespace ArgumentParser
